@@ -4,11 +4,14 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
+<<<<<<< HEAD
+=======
   has_many :restaurants, dependent: :destroy
   has_many :reviews, dependent: :destroy
   
   has_many :reviewed_restaurants, through: :reviews, source: :restaurant
 
+>>>>>>> c889cf8de04c11d8729f5f2437c6168d24fdadb0
   def self.from_omniauth(auth)
 	  where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
 	    user.email = auth.info.email

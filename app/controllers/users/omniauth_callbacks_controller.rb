@@ -11,4 +11,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
+<<<<<<< HEAD
+
 end
+=======
+end
+>>>>>>> c889cf8de04c11d8729f5f2437c6168d24fdadb0
